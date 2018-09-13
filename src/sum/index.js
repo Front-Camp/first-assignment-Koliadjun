@@ -10,7 +10,20 @@
 * sum(-1, 13); // 12
 */
 const sum = (a, b) => {
-  /* your logic here...*/
+  if (isInteger(a) || isInteger(b) || b == '' || a == '') {
+    console.log(isInteger(a));
+    throw new Error();
+  }
+  if (!isNaN(a) || !isNaN(b)) {
+    throw new Error();
+  }
+  if (!isFinite(a) || !isFinite(b)) {
+    throw new Error();
+  }
+  if(isFinite(a) && isFinite(b)){
+    return a+b;
+  }
+
 };
 
 export default sum;

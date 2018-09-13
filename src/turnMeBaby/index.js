@@ -8,7 +8,15 @@
  * turnMeBaby('Some text'); // 'txet emoS'
  */
 const turnMeBaby = str => {
-  /* your logic here...*/
+  var strArray = str.split("");
+  console.log(strArray);
+  for (var i = strArray.length - 1; i >= 0; i--) {
+   var res =[];
+   res.push(strArray[i]);
+   }
+  var resStr = res.join('');
+  console.log(res);
+  return resStr
 };
 
 export default turnMeBaby;
